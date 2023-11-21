@@ -1,0 +1,156 @@
+.PostShare {
+  display: flex;
+  width: 99.5%;
+  gap: 1rem;
+  background-color: var(--cardColor);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  margin: 3px;
+}
+
+.PostShare > img {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+
+.PostShare > div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 1rem;
+}
+
+.PostShare > div > .input-desc {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+.PostShare > div > .input-desc > .emoji-container {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  z-index: 1;
+}
+
+.PostShare > div > .input-desc > svg {
+  color: purple;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.PostShare > div > .input-desc > input {
+  background-color: var(--inputColor);
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+}
+
+.postOption {
+  display: flex;
+  justify-content: space-around;
+}
+
+.option {
+  display: flex;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.option:hover {
+  cursor: pointer;
+}
+
+.ps-button {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 12px;
+}
+
+.previewImage {
+  position: relative;
+}
+
+.previewImage > svg {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.previewImage > svg:hover {
+  cursor: pointer;
+}
+
+.previewImage > img {
+  width: 100%;
+  max-height: 800px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.previewVideo {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.previewVideo > svg {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  z-index: 1;
+}
+
+.previewVideo > svg:hover {
+  cursor: pointer;
+}
+
+.previewVideo > video {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 992px) {
+  .PostShare {
+    width: 97%;
+  }
+  .PostShare > div > .input-desc > input {
+    width: 70%;
+  }
+
+  .PostShare > div > .input-desc > .emoji-container {
+    right: -14px;
+  }
+
+  .PostShare > div > .input-desc > input::placeholder {
+    font-size: 80%;
+  }
+  .EmojiPickerReact {
+    width: 275px !important;
+  }
+
+  .postOption {
+    flex-direction: column;
+    margin-left: -60px;
+  }
+  .ps-button {
+    padding: 10px 5px;
+  }
+}

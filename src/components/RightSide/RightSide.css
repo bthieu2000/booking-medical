@@ -1,0 +1,127 @@
+.RightSide-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: fixed;
+  margin-right: 5px;
+  width: -webkit-fill-available;
+  width: -moz-available; /* WebKit-based browsers will ignore this. */
+  /* width: fill-available; */
+}
+
+.RightSide {
+  position: relative;
+}
+
+.navIcon {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.navIcon > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navIcon > .notifycations {
+  position: relative;
+  /* cursor: pointer; */
+}
+
+.navIcon > .notifycations > .dot {
+  position: absolute;
+  top: 0px;
+  right: -3px;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: red;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.navIcon > .notifycations > img {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.navIcon > .notifycations > .notify-container {
+  display: flex;
+  position: absolute;
+  width: 18rem;
+  max-height: 20rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  top: 45px;
+  right: -170px;
+  overflow: auto;
+  align-items: center;
+}
+
+.navIcon > a > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navIcon > .setting {
+  position: relative;
+  cursor: pointer;
+}
+
+.navIcon > .setting > .setting-container {
+  position: absolute;
+  background-color: #fff;
+  padding: 15px;
+  top: 40px;
+  right: -31px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 15rem;
+}
+
+.navIcon > .setting > .setting-container > .setting-items {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.setting-items > a {
+  text-align: left !important;
+}
+
+.setting-items > span {
+  text-align: right;
+  margin-right: 0.5rem;
+}
+
+.dropdown {
+  width: 2rem;
+  height: 2rem;
+  margin-top: -3px;
+}
+
+.s-button {
+  height: 3rem;
+  width: 80%;
+  align-self: center;
+}
+
+#setting-dropdown {
+  background-color: var(--buttonBg) !important;
+  border: none;
+  color: black;
+  /* margin-top: -9px; */
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+@media screen and (max-width: 992px) {
+  .RightSide-box {
+    position: unset;
+  }
+}

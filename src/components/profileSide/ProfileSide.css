@@ -1,0 +1,17 @@
+.ProfileSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  overflow: auto;
+  position: relative;
+}
+
+.ProfileSide::-webkit-scrollbar {
+  display: none;
+}
+
+.ProfileSide-box {
+  position: fixed;
+  width: -webkit-fill-available;
+}

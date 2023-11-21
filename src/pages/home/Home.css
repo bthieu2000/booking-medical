@@ -1,0 +1,33 @@
+.Home {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 3.5fr 1fr;
+  gap: 1rem;
+  min-height: 100vh;
+  /* max-height: 100vh; */
+}
+
+@media screen and (max-width: 992px) {
+  .Home {
+    grid-template-columns: unset;
+    min-height: unset;
+  }
+
+  .ProfileSide-box {
+    position: unset;
+  }
+
+  .ProfileSide-box > .FollowerCard,
+  .ProfileSide-box > .ProfileCard {
+    display: none;
+  }
+
+  .RightSide {
+    grid-row: 1/-1;
+  }
+
+  .RightSide .TrendCard,
+  .RightSide .s-button {
+    display: none;
+  }
+}

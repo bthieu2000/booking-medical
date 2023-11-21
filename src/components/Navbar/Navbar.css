@@ -1,0 +1,32 @@
+.form-change-pass {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-change-pass > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.input-password > input {
+  margin-right: 10px;
+}
+
+.input-password > svg {
+  color: purple;
+  cursor: pointer;
+}
+
+.change-pass-button {
+  height: 2.5rem;
+  margin-top: 1rem;
+}
+
+.setting-items > span {
+  text-decoration: underline;
+}
+.setting-items > a > span {
+  font-weight: bold;
+}
