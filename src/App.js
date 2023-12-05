@@ -12,6 +12,9 @@ import { useCallback, useEffect } from 'react'
 import PostsResult from './pages/results/PostsResult'
 import VerifyAccount from './pages/auth/VerifyAccount'
 import ActiveAccount from './pages/auth/ActiveAccount'
+import HeaderBN from './components/HeaderBN/HeaderBN'
+import FooterBN from './components/FooterBN/FooterBN'
+
 function App() {
   const dispatch = useDispatch()
   const user = useSelector((state) => state.authReducer.authData) // cái này là lấy từ reducer khi đăng nhập thành công này
@@ -19,22 +22,19 @@ function App() {
 
   return (
     <div className="App">
-      <div className="blur" style={{ top: '-18%', right: '0' }}></div>
-      <div className="blur" style={{ top: '36%', left: ' -8rem' }}></div>
-      {/* ô bọc cái layout ở đây như 2 cái thẻ div bên trên này bọc cái route nhé 2 thẻ div này là tôi làm lớp phủ thôi
-      còn ô muốn layout thỳ ô viết một component layout ở đây xong check role củcauser nếu role nào thỳ hiện cái layout đó */}
+      {user?.user?.role === 'BN' && <HeaderBN />}
       <Routes>
         <Route
           path="/"
           element={
-            user?.user ? (<Navigate to="home" />): (<Navigate to="../auth" />) 
+            user?.user ? (<Navigate to="home" />) : (<Navigate to="../auth" />)
           }
         />
         <Route
           path="/home"
           element={
-              user?.user ? (
-                <Home />
+            user?.user ? (
+              <Home />
             ) : (
               <Navigate to="../auth" />
             )
@@ -83,7 +83,7 @@ function App() {
           }
         />
         <Route
-          path="/auth" 
+          path="/auth"
           element={
             user ? (
               user?.user?.active ? (
@@ -125,6 +125,7 @@ function App() {
           }
         />
       </Routes>
+      {user?.user?.role === 'BN' && <FooterBN />}
     </div>
   )
 }
